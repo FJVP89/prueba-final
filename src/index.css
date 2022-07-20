@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Reenie Beanie', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -8,6 +8,114 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'Reenie Beanie', cursive, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  /* las 3 líneas de abajo son para que cuando se llegue al max-width, el contenido se quede en el centro. */
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  /* las 2 líneas de abajo son para rellenar los extremos para que queden en blanco cuando la pantalla sea detamaño pequeño. */
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Responsive */
+.notes-list {
+  display: grid;
+  /* Abajo debiese ser grid-row-gap */
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.note {
+  background-color: #fef68a;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* lo de abajo es para permitir saltos de línea al guardar texto en una nota */
+  white-space: pre-wrap;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Responsive */
+
+/* Para darle color verde a la nota del final */
+.note.new {
+  background-color: #fef68a;
+}
+
+/* Para quiter el cuadro de textarea (Pero no el borde del cuadro) */
+textarea {
+  border: none;
+  resize: none;
+  background-color: #fef68a;
+  font-family: 'Reenie Beanie', cursive;
+}
+
+/* Para quitar el borde del cuadro */
+textarea:focus {
+  outline: none;
+}
+
+/* Botón guardar */
+.save {
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+
+.save:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+/* Para que aparezca una mano cuando el mouse pase por encima del basurero */
+.delete-icon {
+  cursor: pointer;
+}
+
+
+/* Importantes */
+.note2 {
+  background-color: #EC7063;
+  margin-top: 15px;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* lo de abajo es para permitir saltos de línea al guardar texto en una nota */
+  white-space: pre-wrap;
+}
+
+.note-footer2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note.new2 {
+  background-color: #EC7063;
+  margin-top: 15px;
+}
+
+.textarea2 {
+  border: none;
+  resize: none;
+  background-color: #EC7063;
+  font-family: 'Reenie Beanie', cursive;
+}
+/* Importantes */
+
